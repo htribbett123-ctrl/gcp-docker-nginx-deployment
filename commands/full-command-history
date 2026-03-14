@@ -1,0 +1,43 @@
+# Google Cloud VM Creation
+gcloud compute instances create ubuntu-basic \
+  --zone=us-central1-a \
+  --machine-type=e2-micro \
+  --image-family=ubuntu-2204-lts \
+  --image-project=ubuntu-os-cloud
+
+# System Update
+sudo apt-get update && sudo apt-get upgrade -y
+
+# Install Nginx
+sudo apt install nginx -y
+systemctl status nginx
+curl 127.0.0.1
+
+# Install Docker
+sudo apt-get install docker.io -y
+systemctl status docker
+sudo docker images
+sudo docker pull nginx
+
+# Fix Docker Permissions
+sudo usermod -aG docker $USER
+exit
+
+# Run Nginx in Docker
+docker run nginx
+docker run -d -p 8080:80 nginx
+docker ps
+
+# Add Network Tag
+gcloud compute instances add-tags ubuntu-basic \
+  --tags=http-server \
+  --zone=us-central1-a
+
+# Create Firewall Rule
+gcloud compute firewall-rules create allow-http \
+  --allow=tcp:8080 \
+  --target-tags=http-server
+
+# Test External Access
+curl http://<YOUR_PUBLIC_IP>:8080
+
