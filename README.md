@@ -77,4 +77,36 @@ Background mode (recommended):
 docker run -d -p 8080:80 nginx
 ```
 Check running containers:
+```bash
+docker ps
+```
+
+## 🌍 7. Configure Google Cloud Firewall
+Add a network tag:
+```bash
+gcloud compute instances add-tags ubuntu-basic \
+  --tags=http-server \
+  --zone=us-central1-a
+```
+Create a firewall rule
+```bash
+gcloud compute firewall-rules create allow-http \
+  --allow=tcp:8080 \
+  --target-tags=http-server
+```
+## 🌐 8. Test External Access
+Test from inside the VM:
+```bash
+curl http://<YOUR_PUBLIC_IP>:8080
+```
+Will show the HTML
+
+Replace with your VM’s public IP:
+```bash
+http://<YOUR_PUBLIC_IP>:8080
+```
+
+## You should see a welcome to Ngnix
+
+
 
