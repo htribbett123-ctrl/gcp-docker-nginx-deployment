@@ -1,0 +1,6 @@
+sudo apt-get install docker.io -y
+sudo docker pull nginx
+docker run nginx
+docker run -d -p 8080:80 nginx
+docker ps
+docker stop <container_id>
