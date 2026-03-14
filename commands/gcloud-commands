@@ -1,0 +1,3 @@
+gcloud compute instances create ubuntu-basic 
+gcloud compute instances add-tags ubuntu-basic 
+gcloud compute firewall-rules create allow-http 
