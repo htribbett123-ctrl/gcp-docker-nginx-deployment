@@ -1,5 +1,17 @@
 ## 🐳 Deploying Nginx in Docker on a Google Cloud VM
 
+![Google Cloud](https://img.shields.io/badge/Google%20Cloud-VM%20Instance-blue)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04%20LTS-orange)
+![Linux](https://img.shields.io/badge/Linux-CLI-important)
+![Docker](https://img.shields.io/badge/Docker-Containerization-blue)
+![Nginx](https://img.shields.io/badge/Nginx-Web%20Server-green)
+![Networking](https://img.shields.io/badge/Networking-Port%20Mapping-yellow)
+![Firewall](https://img.shields.io/badge/GCP-Firewall%20Rules-red)
+![Automation](https://img.shields.io/badge/DevOps-Hands--On-blueviolet)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+
+
+
 A complete DevOps workflow demonstrating VM provisioning, package installation, Docker setup, containerized Nginx, port mapping, and Google Cloud firewall configuration
 
 ---
