@@ -110,13 +110,13 @@ gcloud compute firewall-rules create allow-http \
 ## 🌐 8. Test External Access
 Test from inside the VM:
 ```bash
-curl http://<YOUR_PUBLIC_IP>:8080
+curl http://34.56.3.118:8080
 ```
 Will show the HTML
 
 Replace with your VM’s public IP:
 ```bash
-http://<YOUR_PUBLIC_IP>:8080
+http://34.56.3.118:8080
 ```
 
 ## You should see a welcome to Ngnix
