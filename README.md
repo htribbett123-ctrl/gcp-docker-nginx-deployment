@@ -15,3 +15,32 @@ You will learn:
 - Mapping ports for external access
 - Configuring Google Cloud firewall rules
 - Testing the deployment from a browser
+
+  
+## 🏗️ 1. Create a Google Cloud VM
+Run in Cloud Shell:
+gcloud compute instances create ubuntu-basic \
+  --zone=us-central1-a \
+  --machine-type=e2-micro \
+  --image-family=ubuntu-2204-lts \
+  --image-project=ubuntu-os-cloud
+  
+## 🔧 2. Update the V
+sudo apt-get update && sudo apt-get upgrade -y
+
+## 🌐 3. Install Nginx
+
+sudo apt install nginx -y
+check status:
+systemctl status nginx
+Test locally:
+curl 127.0.0.1
+You should see the default Nginx HTML response.
+
+## 🐳 4. Install Docker
+
+sudo apt-get install docker.io -y
+systemctl status docker
+Pull the nginx image:
+sudo docker pull nginx
+
