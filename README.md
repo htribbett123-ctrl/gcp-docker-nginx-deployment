@@ -19,14 +19,18 @@ You will learn:
   
 ## 🏗️ 1. Create a Google Cloud VM
 Run in Cloud Shell:
+```bash
 gcloud compute instances create ubuntu-basic \
   --zone=us-central1-a \
   --machine-type=e2-micro \
   --image-family=ubuntu-2204-lts \
   --image-project=ubuntu-os-cloud
+```
   
 ## 🔧 2. Update the V
+```bash
 sudo apt-get update && sudo apt-get upgrade -y
+```
 
 ## 🌐 3. Install Nginx
 ```bash
@@ -50,6 +54,27 @@ sudo apt-get install docker.io -y:
 systemctl status docker
 ```
 
-Pull the nginx image:
+## Pull the nginx image
+```bash
 sudo docker pull nginx
+```
+## 🔐 5. Fix Docker Permission
+If you see a “permission denied” error, add your user to the Docker group:
+```bash
+sudo usermod -aG docker $USER
+exit
+```
+Re‑SSH into the VM.
+
+## 🟦 6. Run Nginx in Docker
+
+Foreground mode (shows logs)
+```bash
+docker run nginx
+```
+Background mode (recommended):
+```bash
+docker run -d -p 8080:80 nginx
+```
+Check running containers:
 
