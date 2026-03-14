@@ -29,19 +29,26 @@ gcloud compute instances create ubuntu-basic \
 sudo apt-get update && sudo apt-get upgrade -y
 
 ## 🌐 3. Install Nginx
-
+```bash
 sudo apt install nginx -y
-check status:
-systemctl status nginx
+```
 
-Test locally:
+## check Nginx status
+```bash
+systemctl status nginx
+```
+
+## Test locally
+```bash
 curl 127.0.0.1:
+```
 You should see the default Nginx HTML response.
 
 ## 🐳 4. Install Docker
-
+```bash
 sudo apt-get install docker.io -y:
-systemctl status docker:
+systemctl status docker
+```
 
 Pull the nginx image:
 sudo docker pull nginx
