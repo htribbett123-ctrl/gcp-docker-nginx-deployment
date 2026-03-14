@@ -35,13 +35,13 @@ check status:
 systemctl status nginx
 
 Test locally:
-curl 127.0.0.1
+curl 127.0.0.1:
 You should see the default Nginx HTML response.
 
 ## 🐳 4. Install Docker
 
-sudo apt-get install docker.io -y
-systemctl status docker
+sudo apt-get install docker.io -y:
+systemctl status docker:
 
 Pull the nginx image:
 sudo docker pull nginx
