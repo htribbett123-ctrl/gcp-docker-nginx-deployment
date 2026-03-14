@@ -13,7 +13,7 @@
 
 
 A complete DevOps workflow demonstrating VM provisioning, package installation, Docker setup, containerized Nginx, port mapping, and Google Cloud firewall configuration
-[📄 View Full Deployment PDF](https://github.com/htribbett123-ctrl/gcp-docker-nginx-deployment/blob/main/screenshots/full_process.pdf)
+[📄 View Full Deployment PDF](https://github.com/htribbett123-ctrl/gcp-docker-nginx-deployment/blob/main/screenshots/Devops Engineering.pdf)
 ---
 
 ## 📌 Overview
